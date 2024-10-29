@@ -84,9 +84,8 @@ const config: Config = {
       /*                                   Config                                   */
       /* -------------------------------------------------------------------------- */
       fontFamily: {
-        heading: ['var(--font-mona-sans)'],
-        body: ['var(--font-mona-sans)'],
-        'titillium-web': 'var(--font-titillium-web)',
+        heading: ['var(--font-merriweather)'],
+        body: ['var(--font-merriweather)'],
       },
 
       /* ---------------- Border radius for card, input and buttons --------------- */
