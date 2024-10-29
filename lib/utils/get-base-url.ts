@@ -1,3 +1,5 @@
+import { env } from '@/env';
+
 /**
  * Returns the base URL of the application.
  *
@@ -6,5 +8,5 @@
  * @returns The base URL of the application.
  */
 export const getBaseUrl = () => {
-  return process.env.NEXT_PUBLIC_APP_URL;
+  return env.NEXT_PUBLIC_APP_URL;
 };

@@ -1,46 +1,46 @@
-const { resolve } = require("node:path");
+const { resolve } = require('node:path');
 
-const { JAVASCRIPT_FILES } = require("@vercel/style-guide/eslint/constants");
+const { JAVASCRIPT_FILES } = require('@vercel/style-guide/eslint/constants');
 
-const project = resolve(__dirname, "tsconfig.json");
+const project = resolve(__dirname, 'tsconfig.json');
 
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   root: true,
   extends: [
-    "eslint:recommended",
-    "prettier",
-    require.resolve("@vercel/style-guide/eslint/node"),
-    require.resolve("@vercel/style-guide/eslint/typescript"),
-    require.resolve("@vercel/style-guide/eslint/browser"),
-    require.resolve("@vercel/style-guide/eslint/react"),
-    require.resolve("@vercel/style-guide/eslint/next"),
-    "plugin:tailwindcss/recommended",
-    "plugin:depend/recommended",
+    'eslint:recommended',
+    'prettier',
+    require.resolve('@vercel/style-guide/eslint/node'),
+    require.resolve('@vercel/style-guide/eslint/typescript'),
+    require.resolve('@vercel/style-guide/eslint/browser'),
+    require.resolve('@vercel/style-guide/eslint/react'),
+    require.resolve('@vercel/style-guide/eslint/next'),
+    'plugin:tailwindcss/recommended',
+    'plugin:depend/recommended',
     // 'plugin:barrel-files/recommended',
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     project,
   },
   settings: {
-    "import/resolver": { typescript: { project } },
-    "jsx-a11y": {
-      polymorphicPropName: "component",
+    'import/resolver': { typescript: { project } },
+    'jsx-a11y': {
+      polymorphicPropName: 'component',
       components: {
-        Button: "button",
-        Icon: "svg",
-        IconButton: "button",
-        Image: "img",
-        Input: "input",
-        Link: "a",
-        List: "ul",
-        ListDivider: "li",
-        ListItem: "li",
-        ListItemButton: "button",
-        NextImage: "img",
-        NextLink: "a",
-        Textarea: "textarea",
+        Button: 'button',
+        Icon: 'svg',
+        IconButton: 'button',
+        Image: 'img',
+        Input: 'input',
+        Link: 'a',
+        List: 'ul',
+        ListDivider: 'li',
+        ListItem: 'li',
+        ListItemButton: 'button',
+        NextImage: 'img',
+        NextLink: 'a',
+        Textarea: 'textarea',
       },
     },
   },
@@ -53,38 +53,38 @@ module.exports = {
     browser: true,
   },
   plugins: [],
-  ignorePatterns: [".*.js", "node_modules/"],
+  ignorePatterns: ['.*.js', 'node_modules/'],
   rules: {
-    "no-console": [
-      "warn",
+    'no-console': [
+      'warn',
       {
-        allow: ["error"],
+        allow: ['error'],
       },
     ],
-    "no-nested-ternary": "off",
-    "@typescript-eslint/no-misused-promises": [
-      "error",
+    'no-nested-ternary': 'off',
+    '@typescript-eslint/no-misused-promises': [
+      'error',
       {
         checksVoidReturn: false,
       },
     ],
 
-    "react-hooks/exhaustive-deps": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
+    'react-hooks/exhaustive-deps': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
 
     /** Dangerously allow production builds to finish even if type errors were found. */
-    "@typescript-eslint/no-explicit-any": "warn",
-    "@typescript-eslint/no-unsafe-assignment": "warn",
-    "@typescript-eslint/no-unsafe-member-access": "warn",
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-unsafe-assignment': 'warn',
+    '@typescript-eslint/no-unsafe-member-access': 'warn',
 
     /** Others */
-    "@typescript-eslint/no-confusing-void-expression": [
-      "error",
+    '@typescript-eslint/no-confusing-void-expression': [
+      'error',
       { ignoreArrowShorthand: true },
     ],
-    "@typescript-eslint/no-shadow": "off",
-    "@typescript-eslint/restrict-template-expressions": [
-      "error",
+    '@typescript-eslint/no-shadow': 'off',
+    '@typescript-eslint/restrict-template-expressions': [
+      'error',
       {
         allowAny: false,
         allowBoolean: false,
@@ -94,23 +94,23 @@ module.exports = {
       },
     ],
     /** Sort import statements */
-    "import/order": [
-      "warn",
+    'import/order': [
+      'warn',
       {
         groups: [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index",
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
         ],
-        "newlines-between": "always",
-        alphabetize: { order: "asc" },
+        'newlines-between': 'always',
+        alphabetize: { order: 'asc' },
       },
     ],
     /** Sort imports by declaration */
-    "sort-imports": ["warn", { ignoreDeclarationSort: true }],
+    'sort-imports': ['warn', { ignoreDeclarationSort: true }],
   },
   overrides: [
     /**
@@ -120,39 +120,39 @@ module.exports = {
      */
     {
       files: JAVASCRIPT_FILES,
-      extends: ["plugin:@typescript-eslint/disable-type-checked"],
+      extends: ['plugin:@typescript-eslint/disable-type-checked'],
     },
     /** Varies file convention from libraries, e.g. Next.js App Router and Prettier
      * Must use default export */
     {
       files: [
-        "*/**/mail.tsx",
-        "*.config.{mjs,ts}",
-        "app/**/{page,layout,template,not-found,*error,opengraph-image,apple-icon}.tsx",
-        "app/**/{sitemap,robots}.ts",
-        "_components.*.{ts,tsx}",
+        '*/**/mail.tsx',
+        '*.config.{mjs,ts}',
+        'app/**/{page,layout,template,not-found,*error,opengraph-image,apple-icon}.tsx',
+        'app/**/{sitemap,robots}.ts',
+        '_components.*.{ts,tsx}',
       ],
       rules: {
-        "import/no-default-export": "off",
-        "import/prefer-default-export": ["error", { target: "any" }],
+        'import/no-default-export': 'off',
+        'import/prefer-default-export': ['error', { target: 'any' }],
       },
     },
     /** Disable default export rule for config files */
     {
-      files: ["lib/config/*.ts", "lib/config/**/*.ts"],
-      rules: { "import/prefer-default-export": "off" },
+      files: ['lib/config/*.ts', 'lib/config/**/*.ts'],
+      rules: { 'import/prefer-default-export': 'off' },
     },
     /** Disable default export rule for declaration files */
     {
-      files: ["**/*.d.ts"],
-      rules: { "import/no-default-export": "off" },
+      files: ['**/*.d.ts'],
+      rules: { 'import/no-default-export': 'off' },
     },
     /** Mails */
     {
-      files: ["*/**/mail.tsx"],
+      files: ['*/**/mail.tsx'],
       rules: {
-        "tailwindcss/no-custom-classname": "off",
-        "import/no-default-export": "off",
+        'tailwindcss/no-custom-classname': 'off',
+        'import/no-default-export': 'off',
       },
     },
   ],

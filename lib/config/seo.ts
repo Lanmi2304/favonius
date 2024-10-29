@@ -1,9 +1,9 @@
 export const seoAboutPage = {
-  title: "About",
-  description: "",
+  title: 'About',
+  description: '',
 };
 
 export const seoContactPage = {
-  title: "Contact",
-  description: "",
+  title: 'Contact',
+  description: '',
 };

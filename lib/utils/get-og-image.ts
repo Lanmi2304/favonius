@@ -1,4 +1,4 @@
-import { getBaseUrl } from "./get-base-url";
+import { getBaseUrl } from './get-base-url';
 
 interface GetOgImageUrlParams {
   title: string;
@@ -25,10 +25,10 @@ export const getOgImageUrl = ({
 }: GetOgImageUrlParams) => {
   const params = new URLSearchParams({ title });
   if (description) {
-    params.append("description", description);
+    params.append('description', description);
   }
   if (image) {
-    params.append("image", image);
+    params.append('image', image);
   }
 
   return `${getBaseUrl()}/api/og?${params.toString()}`;

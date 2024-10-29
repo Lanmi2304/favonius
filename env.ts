@@ -1,16 +1,16 @@
-import { createEnv } from "@t3-oss/env-nextjs";
-import { vercel } from "@t3-oss/env-nextjs/presets";
-import { z } from "zod";
+import { createEnv } from '@t3-oss/env-nextjs';
+import { vercel } from '@t3-oss/env-nextjs/presets';
+import { z } from 'zod';
 
 export const env = createEnv({
   extends: [vercel()],
 
   shared: {
     NODE_ENV: z
-      .enum(["development", "production", "test"])
-      .default("development"),
+      .enum(['development', 'production', 'test'])
+      .default('development'),
 
-    NEXT_PUBLIC_APP_URL: z.string().default("http://localhost:3000"),
+    NEXT_PUBLIC_APP_URL: z.string().default('http://localhost:3000'),
   },
 
   /**
@@ -18,11 +18,11 @@ export const env = createEnv({
    * isn't built with invalid env vars.
    */
   server: {
-    NODE_ENV: z.enum(["development", "production"]).optional(),
+    NODE_ENV: z.enum(['development', 'production']).optional(),
     ANALYZE: z
-      .enum(["true", "false"])
+      .enum(['true', 'false'])
       .optional()
-      .transform((value) => value === "true"),
+      .transform((value) => value === 'true'),
   },
 
   /**
@@ -51,7 +51,7 @@ export const env = createEnv({
    * useful for Docker builds.
    */
   skipValidation:
-    Boolean(process.env.CI) || process.env.npm_lifecycle_event === "lint",
+    Boolean(process.env.CI) || process.env.npm_lifecycle_event === 'lint',
 
   /**
    * Makes it so that empty strings are treated as undefined. `SOME_VAR: z.string()` and
