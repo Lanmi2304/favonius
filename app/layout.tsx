@@ -1,16 +1,16 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
-import './globals.css';
+import { Merriweather } from 'next/font/google';
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-});
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
+import './globals.css';
+import { Header } from '@/components/shared/header';
+import { Container } from '@/components/shared/wrappers/container';
+
+const merriweather = Merriweather({
+  weight: ['300', '400', '700'],
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+  variable: '--font-merriweather',
 });
 
 export const metadata: Metadata = {
@@ -25,9 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${merriweather.variable} antialiased`}>
+        <Container>
+          <Header />
+        </Container>
+
         {children}
       </body>
     </html>
