@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import { Merriweather } from 'next/font/google';
 
 import './globals.css';
+
 import { Header } from '@/components/shared/header';
-import { Container } from '@/components/shared/wrappers/container';
+import { TailwindIndicator } from '@/components/shared/tailwind-indicator';
 
 const merriweather = Merriweather({
   weight: ['300', '400', '700'],
@@ -26,9 +27,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${merriweather.variable} antialiased`}>
-        <Container>
-          <Header />
-        </Container>
+        <TailwindIndicator />
+        <Header />
 
         {children}
       </body>
