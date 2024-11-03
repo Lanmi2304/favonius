@@ -87,7 +87,7 @@ export function MobileMenu() {
           aria-hidden
         />
 
-        <nav className="fixed inset-y-0 right-0 w-80 translate-x-full rounded-tl-lg bg-background/80 backdrop-blur-sm will-change-transform">
+        <nav className="fixed inset-y-0 right-0 w-80 translate-x-full rounded-tl-lg bg-muted backdrop-blur-sm will-change-transform">
           <ul className="mt-10 flex h-full flex-col gap-4">
             {navLinks.map((link) => (
               <li
