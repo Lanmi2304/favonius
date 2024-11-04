@@ -15,7 +15,7 @@ export function Hero() {
         <Container>
           <h1 className="text-center text-6xl font-semibold text-background [text-shadow:_0_4px_0_rgb(0_0_0_/_50%)]">
             Dobrodosli na <br />
-            <span className="text-7xl italic text-[#333d25]">
+            <span className="text-7xl italic text-accent-foreground">
               Favonius
             </span>{' '}
             ranc
