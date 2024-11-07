@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils/cn';
 
 export function AboutSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true, margin: '50px' });
 
   return (
     <>
