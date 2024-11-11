@@ -14,7 +14,7 @@ export function Header() {
   return (
     <>
       <header className="fixed top-0 z-20 hidden h-auto w-full md:flex">
-        <Container className="mb-0 flex items-center justify-between rounded-b-md bg-muted/70 py-2 backdrop-blur-sm">
+        <Container className="mb-0 flex items-center justify-between rounded-b-md bg-muted/90 py-2 backdrop-blur-sm">
           <Link href="/">
             <Image src="/logo.png" alt="Logo" width={60} height={60} />
           </Link>
@@ -43,7 +43,7 @@ export function Header() {
 
       <div className="flex w-full items-start justify-center md:hidden">
         <header className="fixed top-0 z-20 w-[90%]">
-          <Container className="mb-0 flex items-center justify-between rounded-b-md bg-muted/70 py-2">
+          <Container className="mb-0 flex items-center justify-between rounded-b-md bg-muted/90 py-2">
             <Link href="/">
               <Image src="/logo.png" alt="Logo" width={60} height={60} />
             </Link>
