@@ -1,4 +1,5 @@
 export interface Service {
+  id?: string;
   title: string;
   image: string;
   description: string;
@@ -6,6 +7,7 @@ export interface Service {
 
 export const SERVICES: Service[] = [
   {
+    id: 'terensko_jahanje',
     title: 'Terensko jahanje',
     image: '/hero5.jpg',
     description:
@@ -24,6 +26,7 @@ export const SERVICES: Service[] = [
       'Dozivite adrenalinsku voznju na nasim terenima na quad vozilima. Uz profesionalnu opremu i obuku, sigurno cete uzivati.',
   },
   {
+    id: 'smestaj',
     title: 'Smestaj',
     image: '/hero1.jpg',
     description:

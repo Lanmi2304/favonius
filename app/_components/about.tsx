@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils/cn';
 
 export function AboutSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '50px' });
+  const isInView = useInView(ref, { once: true });
 
   return (
     <>
@@ -29,7 +29,7 @@ export function AboutSection() {
       <div
         ref={ref}
         style={{
-          transform: isInView ? 'none' : 'translateY(200px)',
+          transform: isInView ? 'none' : 'translateY(70px)',
           opacity: isInView ? 1 : 0,
           transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
         }}

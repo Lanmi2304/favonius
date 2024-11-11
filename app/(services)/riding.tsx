@@ -1,12 +1,26 @@
+import { useInView } from 'framer-motion';
 import Image from 'next/image';
-import React from 'react';
+import React, { useRef } from 'react';
 
 import { Button } from '@/components/ui/button';
 
 export function Riding() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
-    <section className="mt-10 flex w-full flex-col items-center justify-center gap-8 py-16 md:flex-row md:gap-0">
-      <div className="flex w-full flex-col gap-6 px-4 md:w-2/3">
+    <section
+      ref={ref}
+      id="terensko_jahanje"
+      className="mt-10 flex w-full flex-col items-center justify-center gap-8 overflow-hidden py-16 md:flex-row md:gap-0"
+    >
+      <div
+        className="flex w-full flex-col gap-6 px-4 md:w-2/3"
+        style={{
+          transform: isInView ? 'translateX(0)' : 'translateX(-100%)',
+          opacity: isInView ? 1 : 0,
+          transition: 'all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.27s',
+        }}
+      >
         <h2 className="text-4xl font-semibold italic text-accent-foreground">
           Terensko Jahanje
         </h2>
@@ -35,7 +49,14 @@ export function Riding() {
           </div>
         </div>
       </div>
-      <div className="relative flex w-full items-center justify-end md:w-1/3">
+      <div
+        className="relative flex w-full items-center justify-end md:w-1/3"
+        style={{
+          transform: isInView ? 'translateX(0)' : 'translateX(100%)',
+          opacity: isInView ? 1 : 0,
+          transition: 'all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.27s',
+        }}
+      >
         <Image
           src="/services/image1.jpg"
           alt="Riding"
