@@ -29,11 +29,43 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+
+    --shadow-sm: 0px 1px 0.5px 0.05000000074505806px #18181b0d;
+    --shadow-md: 0px 1px 2px 0px #18181b0d, 0px 3px 3px 0px #18181b0a,
+      0px 8px 5px 0px #18181b08, 0px 14px 5px 0px #18181b03,
+      0px 21px 6px 0px #18181b00;
+    --shadow-lg: 0px 3px 6px 0px #18181b0f, 0px 10px 10px 0px #18181b0d,
+      0px 23px 14px 0px #18181b08, 0px 41px 16px 0px #18181b03,
+      0px 64px 18px 0px #18181b00;
+    --shadow-xl: 0px 7px 15px 0px #18181b14, 0px 27px 27px 0px #18181b12,
+      0px 61px 37px 0px #18181b0a, 0px 109px 44px 0px #18181b03,
+      0px 171px 48px 0px #18181b00;
+    --shadow-2xl: 0px 17px 38px 0px #18181b1a, 0px 68px 68px 0px #18181b17,
+      0px 154px 92px 0px #18181b0d, 0px 273px 109px 0px #18181b03,
+      0px 426px 119px 0px #18181b00;
+
+    --shadow-actions-primary: 0px 1px 1px 0.05000000074505806px #18181b3d,
+      0px 2px 0px 0px #ffffff1a inset, 0px 8px 16px 0px #ffffff29 inset;
+    --shadow-actions-primary-hover: 0px 2px 0px 0px #ffffff1a inset,
+      0px 8px 16px 0px #ffffff29 inset,
+      0px 1px 1px 0.05000000074505806px #18181b3d;
+    --shadow-actions-primary-active: 0px 1px 1px 0.5px #18181b0d,
+      0px 0px 0px 4px #2563eb29, 0px 0px 0px 1px #2563eb40;
+    --shadow-actions-secondary: 0px 1px 0.5px 0.05000000074505806px #18181b0d,
+      0px 2px 0px 0px #ffffff05 inset, 0px -4px 8px 0px #00000005 inset,
+      0px 8px 16px 0px #ffffff05 inset;
+    --shadow-actions-secondary-hover: 0px 1px 0.5px 0.05000000074505806px
+        #18181b0d,
+      0px 2px 0px 0px #ffffff05 inset, 0px -4px 8px 0px #00000005 inset,
+      0px 8px 16px 0px #ffffff05 inset;
+    --shadow-actions-secondary-active: 0px 1px 1px 0.5px #18181b0d,
+      0px 0px 0px 4px #2563eb29, 0px 0px 0px 1px #2563eb40;
+
+    --shadow-card: var(--shadow-md);
   }
 }
 
 body {
   font-family: var(--font-merriweather);
   background-color: hsl(45, 50%, 92%);
-  height: 3000px;
 }
