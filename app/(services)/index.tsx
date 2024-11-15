@@ -1,4 +1,8 @@
+'use client';
+import { Accommodation } from '@/app/(services)/accommodation';
+import { Quad } from '@/app/(services)/quad';
 import { Riding } from '@/app/(services)/riding';
+import { RidingSchool } from '@/app/(services)/riding-school';
 import { Container } from '@/components/shared/wrappers/container';
 import { Button } from '@/components/ui/button';
 import {
@@ -11,6 +15,10 @@ import {
 import { SERVICES } from '@/lib/config/services';
 
 export function Services() {
+  const handleScrollToProduct = (id: string) => {
+    const product = document.getElementById(id);
+    if (product) product.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <Container>
       <h1 className="mt-10 text-center text-5xl font-bold italic text-accent-foreground">
@@ -29,7 +37,10 @@ export function Services() {
               <p>{service.description}</p>
             </CardContent>
             <CardFooter className="absolute bottom-0 flex w-full items-center justify-center">
-              <Button className="w-full bg-accent-foreground/80 hover:bg-accent-foreground/70">
+              <Button
+                className="w-full bg-accent-foreground/80 hover:bg-accent-foreground/70"
+                onClick={() => handleScrollToProduct(service.id ?? '')}
+              >
                 Procitaj vise
               </Button>
             </CardFooter>
@@ -37,6 +48,9 @@ export function Services() {
         ))}
       </div>
       <Riding />
+      <Accommodation />
+      <RidingSchool />
+      <Quad />
     </Container>
   );
 }

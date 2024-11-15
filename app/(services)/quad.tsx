@@ -4,25 +4,40 @@ import React, { useRef } from 'react';
 
 import { Button } from '@/components/ui/button';
 
-export function Riding() {
+export function Quad() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
     <section
       ref={ref}
-      id="terensko_jahanje"
-      className="mt-10 flex w-full flex-col items-center justify-center gap-8 overflow-hidden py-16 md:flex-row md:gap-0"
+      id="voznja_kvadom"
+      className="flex w-full flex-col-reverse items-center justify-center gap-8 overflow-hidden py-16 md:flex-row md:gap-0"
     >
       <div
-        className="flex w-full flex-col gap-6 px-4 md:w-2/3"
+        className="relative flex h-[400px] w-full items-center justify-end overflow-hidden rounded-lg md:w-1/3"
         style={{
           transform: isInView ? 'translateX(0)' : 'translateX(-100%)',
           opacity: isInView ? 1 : 0,
           transition: 'all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.27s',
         }}
       >
+        <Image
+          src="/services/image3.jpg"
+          alt="Riding"
+          fill
+          className="absolute inset-0 rounded-lg object-cover"
+        />
+      </div>
+      <div
+        className="flex w-full flex-col gap-6 px-4 md:w-2/3 md:pl-10"
+        style={{
+          transform: isInView ? 'translateX(0)' : 'translateX(100%)',
+          opacity: isInView ? 1 : 0,
+          transition: 'all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.27s',
+        }}
+      >
         <h2 className="text-4xl font-semibold italic text-accent-foreground">
-          Terensko Jahanje
+          Voznja Kvadom
         </h2>
 
         <p>
@@ -48,22 +63,6 @@ export function Riding() {
             </Button>
           </div>
         </div>
-      </div>
-      <div
-        className="relative flex w-full items-center justify-end md:w-1/3"
-        style={{
-          transform: isInView ? 'translateX(0)' : 'translateX(100%)',
-          opacity: isInView ? 1 : 0,
-          transition: 'all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.27s',
-        }}
-      >
-        <Image
-          src="/services/image1.jpg"
-          alt="Riding"
-          width={420}
-          height={350}
-          className="rounded-lg"
-        />
       </div>
     </section>
   );
