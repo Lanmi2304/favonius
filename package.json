@@ -14,7 +14,9 @@
     "test": "pnpm lint && pnpm format && tsc --noEmit"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@t3-oss/env-nextjs": "^0.11.1",
     "class-variance-authority": "^0.7.0",
@@ -22,15 +24,19 @@
     "embla-carousel-react": "^8.3.1",
     "framer-motion": "^11.11.11",
     "next": "15.0.1",
+    "nodemailer": "^6.9.16",
     "react": "19.0.0-rc-69d4b800-20241021",
     "react-countup": "^6.5.3",
     "react-dom": "19.0.0-rc-69d4b800-20241021",
+    "react-hook-form": "^7.53.2",
+    "sonner": "^1.7.0",
     "tailwind-merge": "^2.5.4",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.16",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@vercel/style-guide": "^6.0.0",

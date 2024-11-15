@@ -3,6 +3,8 @@ import { Merriweather } from 'next/font/google';
 
 import './globals.css';
 
+import { Toaster } from 'sonner';
+
 import { Footer } from '@/components/shared/footer';
 import { Header } from '@/components/shared/header';
 import { TailwindIndicator } from '@/components/shared/tailwind-indicator';
@@ -29,6 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${merriweather.variable} antialiased`}>
         <TailwindIndicator />
+        <Toaster position="top-center" />
         <Header />
 
         {children}
