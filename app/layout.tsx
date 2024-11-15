@@ -3,6 +3,7 @@ import { Merriweather } from 'next/font/google';
 
 import './globals.css';
 
+import { Footer } from '@/components/shared/footer';
 import { Header } from '@/components/shared/header';
 import { TailwindIndicator } from '@/components/shared/tailwind-indicator';
 
@@ -31,6 +32,7 @@ export default function RootLayout({
         <Header />
 
         {children}
+        <Footer />
       </body>
     </html>
   );

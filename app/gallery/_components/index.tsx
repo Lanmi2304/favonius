@@ -37,10 +37,10 @@ export function MasonryLayout() {
   return (
     <>
       <Container className="relative top-[100px] flex flex-col">
-        <h1 className="my-10 text-center text-6xl italic text-accent-foreground">
+        <h1 className="my-10 text-center text-4xl italic text-accent-foreground md:text-6xl">
           Upoznajte naš Raj na Zemlji
         </h1>
-        <div className="columns-2 gap-4 sm:columns-3 md:columns-4 lg:columns-5">
+        <div className="mb-80 columns-2 gap-4 sm:columns-3 md:columns-4 lg:columns-5">
           {images.map((image, index) => (
             <div
               aria-hidden
