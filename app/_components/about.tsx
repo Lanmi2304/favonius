@@ -34,7 +34,7 @@ export function AboutSection() {
           transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
         }}
       >
-        <Container className="my-10 flex flex-col md:h-[700px] md:flex-row">
+        <Container className="my-10 flex flex-col md:h-fit md:flex-row">
           <div className="flex w-full items-center justify-center overflow-hidden rounded-lg md:w-1/2">
             <div className="relative size-[350px] lg:size-[500px]">
               <Image

@@ -50,7 +50,7 @@ export function Riding() {
         </div>
       </div>
       <div
-        className="relative flex w-full items-center justify-end md:w-1/3"
+        className="relative flex w-full items-center md:w-1/3"
         style={{
           transform: isInView ? 'translateX(0)' : 'translateX(100%)',
           opacity: isInView ? 1 : 0,
