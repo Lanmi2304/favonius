@@ -2,12 +2,15 @@ import Image from 'next/image';
 
 import { Container } from '@/components/shared/wrappers/container';
 
+import heroImage from '../../public/hero1.jpg';
+
 export function Hero() {
   return (
     <section className="relative flex h-screen w-full items-center justify-center">
       <Image
-        src="/hero1.jpg"
+        src={heroImage}
         alt="Hero"
+        placeholder="blur"
         fill
         className="absolute inset-0 size-full object-cover"
       />

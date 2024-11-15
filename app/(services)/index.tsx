@@ -1,6 +1,8 @@
 'use client';
 import { Accommodation } from '@/app/(services)/accommodation';
+import { Quad } from '@/app/(services)/quad';
 import { Riding } from '@/app/(services)/riding';
+import { RidingSchool } from '@/app/(services)/riding-school';
 import { Container } from '@/components/shared/wrappers/container';
 import { Button } from '@/components/ui/button';
 import {
@@ -47,6 +49,8 @@ export function Services() {
       </div>
       <Riding />
       <Accommodation />
+      <RidingSchool />
+      <Quad />
     </Container>
   );
 }

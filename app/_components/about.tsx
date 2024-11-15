@@ -45,7 +45,7 @@ export function AboutSection() {
               />
             </div>
           </div>
-          <div className="flex w-full flex-col items-center gap-10 px-10 md:mt-10 md:w-1/2">
+          <div className="flex w-full flex-col items-center gap-4 px-10 md:mt-10 md:w-1/2">
             <h1 className="mt-10 text-center text-5xl font-bold italic text-accent-foreground">
               Nase prace raja
             </h1>
