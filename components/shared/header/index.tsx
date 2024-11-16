@@ -15,13 +15,14 @@ export function Header() {
     <>
       <header className="fixed top-0 z-20 hidden h-auto w-full md:flex">
         <Container className="mb-0 flex items-center justify-between rounded-b-md bg-muted/90 py-2 backdrop-blur-sm">
-          <Link href="/">
+          <Link href="/" prefetch>
             <Image src="/logo.png" alt="Logo" width={60} height={60} />
           </Link>
           <div className="flex gap-6">
             {navLinks.map((link) => (
               <Link
                 key={crypto.randomUUID()}
+                prefetch
                 href={link.href}
                 className={cn(
                   'hover:underline',

@@ -80,7 +80,7 @@ export function Accommodation() {
             Za vise informacija kontaktirajte nas putem
           </h5>
           <div className="flex w-full gap-4">
-            <Link href="/contact">
+            <Link href="/contact" prefetch>
               <Button className="bg-accent-foreground/80 text-white hover:bg-accent-foreground/70">
                 Putem E-mail adrese
               </Button>
