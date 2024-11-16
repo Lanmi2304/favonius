@@ -2,6 +2,7 @@
 
 import { useInView } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRef } from 'react';
 
 import { Button } from '@/components/ui/button';
@@ -12,6 +13,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { PiPhoneDefaultStroke } from '@/components/ui/icons/pi-phone-stroke';
 
 export function Accommodation() {
   const ref = useRef(null);
@@ -78,11 +80,14 @@ export function Accommodation() {
             Za vise informacija kontaktirajte nas putem
           </h5>
           <div className="flex w-full gap-4">
-            <Button className="bg-accent-foreground/80 text-white hover:bg-accent-foreground/70">
-              Putem E-mail adrese
-            </Button>
-            <Button className="bg-accent-foreground/80 text-white hover:bg-accent-foreground/70">
-              Telefona
+            <Link href="/contact">
+              <Button className="bg-accent-foreground/80 text-white hover:bg-accent-foreground/70">
+                Putem E-mail adrese
+              </Button>
+            </Link>
+            <Button className="flex gap-1 bg-accent-foreground/80 text-white hover:bg-accent-foreground/70">
+              <PiPhoneDefaultStroke className="size-4" />
+              <a href="tel:+38163105283">Telefona</a>
             </Button>
           </div>
         </div>
