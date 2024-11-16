@@ -16,6 +16,7 @@ export function Footer() {
           <div className="flex-col items-center justify-center sm:flex sm:flex-row sm:items-center sm:justify-between">
             <Link
               href="/"
+              prefetch
               className="sm: mb-4 flex items-center justify-center space-x-3 sm:mb-0 sm:justify-start"
             >
               <Image
@@ -30,6 +31,7 @@ export function Footer() {
               {navLinks.map((link) => (
                 <li key={crypto.randomUUID()}>
                   <Link
+                    prefetch
                     href={link.href}
                     className="me-4 hover:underline md:me-6"
                   >
@@ -62,7 +64,7 @@ export function Footer() {
           <hr className="my-6 border-accent sm:mx-auto lg:my-8" />
           <span className="block text-center text-sm text-accent-foreground">
             © {year}{' '}
-            <Link href="/" className="hover:underline">
+            <Link href="/" prefetch className="hover:underline">
               Favonius
             </Link>
             . All Rights Reserved.
