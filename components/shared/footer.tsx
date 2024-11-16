@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Container } from '@/components/shared/wrappers/container';
+import { PiFacebookStroke } from '@/components/ui/icons/pi-facebook-stroke';
+import { PiInstagramStroke } from '@/components/ui/icons/pi-instagram-stroke';
 import { navLinks } from '@/lib/config/navigation';
 
 export function Footer() {
@@ -23,6 +25,7 @@ export function Footer() {
                 alt="Favonius Logo"
               />
             </Link>
+
             <ul className="mb-6 flex flex-wrap items-center justify-center text-sm font-medium text-accent sm:mb-0">
               {navLinks.map((link) => (
                 <li key={crypto.randomUUID()}>
@@ -35,6 +38,26 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+            <div className="me-4 flex justify-center gap-2 text-sm font-medium text-accent md:me-6">
+              <Link
+                href="https://www.instagram.com/ranc.favonius/"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="flex items-center hover:underline"
+              >
+                <PiInstagramStroke />
+                Instagram
+              </Link>
+              <Link
+                href="https://facebook.com"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="flex items-center hover:underline"
+              >
+                <PiFacebookStroke />
+                Facebook
+              </Link>
+            </div>
           </div>
           <hr className="my-6 border-accent sm:mx-auto lg:my-8" />
           <span className="block text-center text-sm text-accent-foreground">

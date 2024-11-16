@@ -43,7 +43,7 @@ export async function sendMail(data: EmailSchemaInput) {
 
   return {
     success: true,
-    message: 'Email successfully sent!',
+    message: 'Vasa poruka je uspesno poslata!',
     status: 200,
   };
 }

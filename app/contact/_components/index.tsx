@@ -10,6 +10,7 @@ import {
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 
+import { Socials } from '@/app/contact/_components/socials';
 import { sendMail } from '@/app/contact/action';
 import { Container } from '@/components/shared/wrappers/container';
 import { Button } from '@/components/ui/button';
@@ -95,7 +96,9 @@ export function Contact() {
                 name="name"
                 render={({ field }) => (
                   <FormItem className="w-full">
-                    <FormLabel>Ime i prezime: *</FormLabel>
+                    <FormLabel className="text-accent-foreground">
+                      Ime i prezime: *
+                    </FormLabel>
                     <FormControl>
                       <Input {...field} className="w-full" />
                     </FormControl>
@@ -108,7 +111,9 @@ export function Contact() {
                 name="email"
                 render={({ field }) => (
                   <FormItem className="w-full">
-                    <FormLabel>E-mail: *</FormLabel>
+                    <FormLabel className="text-accent-foreground">
+                      E-mail: *
+                    </FormLabel>
                     <FormControl>
                       <Input {...field} />
                     </FormControl>
@@ -123,7 +128,9 @@ export function Contact() {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Poruka: *</FormLabel>
+                  <FormLabel className="text-accent-foreground">
+                    Poruka: *
+                  </FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="Message us..."
@@ -151,10 +158,12 @@ export function Contact() {
             </Button>
           </form>
         </Form>
+
+        <Socials />
       </Container>
-      <h1 className="mb-10 mt-0 text-center text-5xl font-bold italic text-accent-foreground">
+      <h2 className="mb-10 mt-0 text-center text-3xl font-bold italic text-accent-foreground">
         Pronadjite nas na mapi
-      </h1>
+      </h2>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d301.760559400094!2d19.89387787601092!3d44.208453247934024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4759eb3334289783%3A0xdf54d31d84ab42d0!2sRan%C4%8D%20Favonius!5e0!3m2!1sen!2srs!4v1731695064023!5m2!1sen!2srs"
         title="map"
